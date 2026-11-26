@@ -236,7 +236,7 @@ const ContentPage = () => {
       ref={container}
       className="overflow-hidden bg-[#eeeae2] text-[#181815]"
     >
-      <section className="fashion-section relative isolate h-screen min-h-[650px] overflow-hidden bg-black text-white">
+      <section className="fashion-section relative isolate h-screen min-h-162.5 overflow-hidden bg-black text-white">
         <div className="absolute inset-0">
           <Image
             src={heroImage}
@@ -250,7 +250,7 @@ const ContentPage = () => {
 
         <div className="absolute inset-0 bg-black/35" />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/25" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-black/25" />
 
         <div className="hero-kicker absolute left-6 right-6 top-7 z-20 flex items-center justify-between md:left-12 md:right-12"></div>
 
@@ -299,7 +299,7 @@ const ContentPage = () => {
             </div>
           </div>
 
-          <div className="collection-visuals relative mx-auto min-h-[550px] w-full max-w-2xl md:min-h-[700px]">
+          <div className="collection-visuals relative mx-auto min-h-137.5 w-full max-w-2xl md:min-h-175">
             <div className="image-one-frame absolute left-0 top-0 h-[68%] w-[72%] overflow-hidden bg-neutral-300">
               <Image
                 src={campaignImageOne}
@@ -311,7 +311,7 @@ const ContentPage = () => {
               />
             </div>
 
-            <div className="image-two-frame absolute bottom-0 right-0 h-[48%] w-[58%] overflow-hidden border-[8px] border-[#eeeae2] bg-neutral-300 md:border-[12px]">
+            <div className="image-two-frame absolute bottom-0 right-0 h-[48%] w-[58%] overflow-hidden border-8 border-[#eeeae2] bg-neutral-300 md:border-12">
               <Image
                 src={campaignImageTwo}
                 alt="Fashion collection detail photograph"
@@ -329,7 +329,7 @@ const ContentPage = () => {
         </div>
       </section>
 
-      <section className="card-section relative flex h-screen min-h-[650px] flex-col justify-center overflow-hidden bg-[#181815] px-6 py-16 text-white md:px-12">
+      <section className="card-section relative flex h-screen min-h-162.5 flex-col justify-center overflow-hidden bg-[#181815] px-6 py-16 text-white md:px-12">
         <div className="mb-10 flex items-end justify-between">
           <div>
             <p className="mb-4 text-[10px] uppercase tracking-[0.5em] text-white/40">
@@ -354,7 +354,7 @@ const ContentPage = () => {
           {cards.map((card, index) => (
             <article
               key={card.id}
-              className="group relative h-[55vh] min-h-[350px] w-[78vw] max-w-[400px] shrink-0 overflow-hidden bg-neutral-800 md:w-[32vw]"
+              className="group relative h-[55vh] min-h-87.5 w-[78vw] max-w-100 shrink-0 overflow-hidden bg-neutral-800 md:w-[32vw]"
             >
               <Image
                 src={card.image}
@@ -364,7 +364,7 @@ const ContentPage = () => {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
 
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
                 <div className="mb-5 flex items-center justify-between">
@@ -377,7 +377,7 @@ const ContentPage = () => {
                   </span>
                 </div>
 
-                <h3 className="text-3xl font-black uppercase tracking-[-0.05em] md:text-4xl">
+                <h3 className="text-3xl font-black uppercase tracking-tighter md:text-4xl">
                   {card.name}
                 </h3>
 
@@ -398,7 +398,7 @@ const ContentPage = () => {
             <span className="circle-text-left block">Beyond</span>
             <span className="circle-text-right block">Ordinary.</span>
           </h2>
-          <button className="circle-button-left relative z-10 flex h-14 w-50 items-center justify-center rounded-full bg-white text-sm font-extrabold uppercase tracking-[0.2em] text-black transition-colors duration-300 hover:bg-[#eeeae2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:h-36 md:w-36">
+          <button className="circle-button-left relative z-10 flex h-14 w-50 items-center justify-center rounded-full bg-white text-sm font-extrabold uppercase tracking-[0.2em] text-black transition-colors duration-300 hover:bg-[#eeeae2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:h-26 md:text-2xl md:w-106">
             Contact
           </button>
         </div>

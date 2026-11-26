@@ -10,7 +10,6 @@ gsap.registerPlugin(useGSAP);
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -76,9 +75,9 @@ const Header = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
@@ -130,7 +129,7 @@ const Header = () => {
         aria-hidden={!isOpen}
         className="invisible fixed inset-0 z-60 bg-amber-100 text-neutral-900"
       >
-        <div className="w-full items-end flex justify-end p-4">
+        <div className="w-full absolute items-end flex justify-end p-4">
           <IoClose
             className="text-2xl"
             onClick={() => setIsOpen((prev) => !prev)}
@@ -143,7 +142,7 @@ const Header = () => {
                 href={link.href}
                 tabIndex={isOpen ? 0 : -1}
                 onClick={() => setIsOpen(false)}
-                className="menu-link inline-block text-5xl font-bold"
+                className="menu-link inline-block text-4xl font-bold"
               >
                 {link.label}
               </a>
